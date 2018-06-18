@@ -156,6 +156,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ASCIPLibs.h" />
+    <ClInclude Include="opencv340_Analysis.h" />
     <ClInclude Include="opencv340_Conversion.h" />
     <ClInclude Include="opencv340_Filter.h" />
     <ClInclude Include="stdafx.h" />
@@ -164,6 +165,7 @@
   <ItemGroup>
     <ClCompile Include="ASCIPLibs.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="opencv340_Analysis.cpp" />
     <ClCompile Include="opencv340_Conversion.cpp" />
     <ClCompile Include="opencv340_Filter.cpp" />
     <ClCompile Include="stdafx.cpp">

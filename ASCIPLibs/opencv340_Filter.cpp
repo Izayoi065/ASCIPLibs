@@ -6,7 +6,7 @@
 //****************************************************************************************************
 // BGRベースのソーベルフィルタ
 // A_：入力とするMat型画像データ　B_：出力とするMat型画像データ　threshold：BGRの最大値の閾値
-DllExport void BGR_Sobel(cv::InputArray A_, cv::OutputArray dest_, int threshold)
+DllExport void CvtBGR_Sobel(cv::InputArray A_, cv::OutputArray dest_, int threshold)
 {
 	cv::Mat src_image = A_.getMat();	// 入力画像
 
@@ -35,7 +35,10 @@ DllExport void BGR_Sobel(cv::InputArray A_, cv::OutputArray dest_, int threshold
 	sobel.copyTo(dest_);
 }
 
-DllExport void Gray_Sobel(cv::InputArray A_, cv::OutputArray dest_, int threshold)
+//****************************************************************************************************
+// Grayベースのソーベルフィルタ
+// A_：入力とするMat型画像データ　B_：出力とするMat型画像データ　threshold：BGRの最大値の閾値
+DllExport void CvtGray_Sobel(cv::InputArray A_, cv::OutputArray dest_, int threshold)
 {
 	cv::Mat src_image = A_.getMat();	// 入力画像
 
@@ -55,10 +58,13 @@ DllExport void Gray_Sobel(cv::InputArray A_, cv::OutputArray dest_, int threshol
 	sobel.copyTo(dest_);
 }
 
-DllExport void BGR_Laplacian(cv::InputArray A_, cv::OutputArray dest_, int threshold)
+//****************************************************************************************************
+// BGRベースのラプラシアンフィルタ
+// A_：入力とするMat型画像データ　B_：出力とするMat型画像データ　threshold：BGRの最大値の閾値
+DllExport void CvtBGR_Laplacian(cv::InputArray A_, cv::OutputArray dest_, int threshold)
 {
 	cv::Mat src_image = A_.getMat();	// 入力画像
-	cv::GaussianBlur(src_image, src_image, cv::Size(5, 5), 0);
+	//cv::GaussianBlur(src_image, src_image, cv::Size(5, 5), 0);
 
 	//------------------------------B, G, Rに分解------------------------------
 	cv::Mat channels[3];
@@ -79,10 +85,13 @@ DllExport void BGR_Laplacian(cv::InputArray A_, cv::OutputArray dest_, int thres
 	lap_image.copyTo(dest_);
 }
 
-DllExport void Gray_Laplacian(cv::InputArray A_, cv::OutputArray dest_, int threshold)
+//****************************************************************************************************
+// Grayベースのラプラシアンフィルタ
+// A_：入力とするMat型画像データ　B_：出力とするMat型画像データ　threshold：BGRの最大値の閾値
+DllExport void CvtGray_Laplacian(cv::InputArray A_, cv::OutputArray dest_, int threshold)
 {
 	cv::Mat src_image = A_.getMat();	// 入力画像
-	cv::GaussianBlur(src_image, src_image, cv::Size(5, 5), 0);
+	//cv::GaussianBlur(src_image, src_image, cv::Size(5, 5), 0);
 
 	//-----------------------------グレースケール化-----------------------------
 	cv::Mat gray_image;					// グレースケール画像
@@ -97,7 +106,10 @@ DllExport void Gray_Laplacian(cv::InputArray A_, cv::OutputArray dest_, int thre
 	lap_image.copyTo(dest_);
 }
 
-DllExport void BGR_Canny(cv::InputArray A_, cv::OutputArray dest_, int threshold)
+//****************************************************************************************************
+// BGRベースのCannyフィルタ
+// A_：入力とするMat型画像データ　B_：出力とするMat型画像データ　threshold：BGRの最大値の閾値
+DllExport void CvtBGR_Canny(cv::InputArray A_, cv::OutputArray dest_, int threshold)
 {
 	cv::Mat src_image = A_.getMat();	// 入力画像
 	cv:: Mat canny_image;
@@ -118,7 +130,10 @@ DllExport void BGR_Canny(cv::InputArray A_, cv::OutputArray dest_, int threshold
 	canny_image.copyTo(dest_);
 }
 
-DllExport void Gray_Canny(cv::InputArray A_, cv::OutputArray dest_, int threshold)
+//****************************************************************************************************
+// GrayベースのCannyフィルタ
+// A_：入力とするMat型画像データ　B_：出力とするMat型画像データ　threshold：BGRの最大値の閾値
+DllExport void CvtGray_Canny(cv::InputArray A_, cv::OutputArray dest_, int threshold)
 {
 	cv::Mat src_image = A_.getMat();	// 入力画像
 	cv::Mat canny_image;

@@ -3,7 +3,9 @@
 #include "stdafx.h"
 #include "opencv340_Conversion.h"
 
-/* グレースケール変換 */
+//****************************************************************************************************
+// グレースケールに変換
+// A_：入力とするMat型画像データ　B_：出力とするMat型画像データ
 DllExport void CvtGray(cv::InputArray inputSrc_, cv::OutputArray outputSrc_)
 {
 	cv::Mat inputSrc = inputSrc_.getMat();
@@ -13,7 +15,9 @@ DllExport void CvtGray(cv::InputArray inputSrc_, cv::OutputArray outputSrc_)
 	outputSrc.copyTo(outputSrc_);
 }
 
-/* ホワイトトップハット処理 */
+//****************************************************************************************************
+// ホワイトトップハット変換
+// A_：入力とするMat型画像データ　B_：出力とするMat型画像データ　Counts：膨張・収縮の試行回数
 DllExport void CvtWhiteTop_Hat(cv::InputArray inputSrc_, cv::OutputArray outputSrc_, int Counts)
 {
 	cv::Mat inputSrc = inputSrc_.getMat();

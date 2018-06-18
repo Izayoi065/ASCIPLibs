@@ -36,6 +36,9 @@
     <ClInclude Include="opencv340_Filter.h">
       <Filter>ヘッダー ファイル\opencv-340</Filter>
     </ClInclude>
+    <ClInclude Include="opencv340_Analysis.h">
+      <Filter>ヘッダー ファイル\opencv-340</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -51,6 +54,9 @@
       <Filter>ソース ファイル\opencv-340</Filter>
     </ClCompile>
     <ClCompile Include="opencv340_Filter.cpp">
+      <Filter>ソース ファイル\opencv-340</Filter>
+    </ClCompile>
+    <ClCompile Include="opencv340_Analysis.cpp">
       <Filter>ソース ファイル\opencv-340</Filter>
     </ClCompile>
   </ItemGroup>
