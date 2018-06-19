@@ -19,6 +19,12 @@
     <Filter Include="ヘッダー ファイル\opencv-340">
       <UniqueIdentifier>{cc22eb34-d552-4559-a1c5-4d7d6d8b571a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Standard">
+      <UniqueIdentifier>{08bf74b5-6297-4c90-9a78-e663a7ba2ddb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Standard">
+      <UniqueIdentifier>{263cd14e-2b53-4b78-9d08-f1ca0dd795cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -39,6 +45,9 @@
     <ClInclude Include="opencv340_Analysis.h">
       <Filter>ヘッダー ファイル\opencv-340</Filter>
     </ClInclude>
+    <ClInclude Include="fileOperator.h">
+      <Filter>ヘッダー ファイル\Standard</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -58,6 +67,9 @@
     </ClCompile>
     <ClCompile Include="opencv340_Analysis.cpp">
       <Filter>ソース ファイル\opencv-340</Filter>
+    </ClCompile>
+    <ClCompile Include="fileOperator.cpp">
+      <Filter>ソース ファイル\Standard</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

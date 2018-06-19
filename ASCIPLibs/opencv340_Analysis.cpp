@@ -6,11 +6,12 @@
 //****************************************************************************************************
 // フーリエ変換
 // A_：入力とするMat型画像データ　B_：出力とするMat型画像データ
-DllExport void CvtFFTencodeImage(cv::InputArray A_, cv::OutputArray dest_)
+// https://github.com/nikq/fourierGraph/blob/master/cvdft.h
+DllExport void CvtDoDFTImage(cv::InputArray A_, cv::OutputArray dest_)
 {
 	cv::Mat A = A_.getMat();	// 入力画像
 
-	cv::cvtColor(A, A, cv::COLOR_BGR2GRAY);
+	//cv::cvtColor(A, A, cv::COLOR_BGR2GRAY);
 
 	cv::Mat Re_img, Im_img, Complex_img, dft_src, dft_dst, dft_dst_p, mag_img;
 	std::vector<cv::Mat> mv;
@@ -42,7 +43,7 @@ DllExport void CvtFFTencodeImage(cv::InputArray A_, cv::OutputArray dest_)
 //****************************************************************************************************
 // 逆フーリエ変換
 // A_：入力とするMat型画像データ　B_：出力とするMat型画像データ
-DllExport void CvtFFTdecodeImage(cv::InputArray A_, cv::OutputArray dest_)
+DllExport void CvtDoIDFTImage(cv::InputArray A_, cv::OutputArray dest_)
 {
 	cv::Mat A = A_.getMat();	// 入力画像
 
